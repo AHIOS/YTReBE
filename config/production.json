@@ -1,6 +1,48 @@
 {
-  "host": "HOST",
+  "host": "http://staging-ytremix.herokuapp.com",
   "port": "PORT",
-  "PRODUCTION":"ISPRODUCTION",
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "secret": "0f9977de024fda8e4f076bfc4defffdaae188f50c569b25b911c0a228e1e56e1b6eff78828e7543dbf742f6507cc45af135d474ae2ef863dc391c823f503720be93a4588507f7f631f3454e92d2b36811ae70b7d4aa2f8a49de36f4cdfb39e2f5ba02aac31d26e552a27dc920e4844db1d2c39209ffca811a12be0791ca1011f18ffea2545b95c6b9be34d1151022bc73df373ed791934aff8bd820f3093ac9120e24e519e843b87abfb89619cb26dc9eb16148f81b43c13feaa6d42298b9fed2554c4957253a6d2b0a8d51e4ee26eef5cb16822f318c54749a34dc9405c92ef32a29cf27825d5f0920ddcb165682f0f17574dcb5b2441312ccf8f516f4ff74f",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://staging-ytremix.herokuapp.com",
+      "subject": "auth",
+      "issuer": "ytremix",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "google": {
+      "clientID": "GOOGLE_API_KEY",
+      "clientSecret": "GOOGLE_API_SECRET",
+      "successRedirect": "/",
+      "scope": [
+        "profile openid email"
+      ]
+    },
+    "cookie": {
+      "enabled": true,
+      "name": "feathers-jwt",
+      "httpOnly": false,
+      "secure": false
+    }
+  },
   "mongodb": "MONGODB"
 }
