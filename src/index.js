@@ -5,6 +5,7 @@ const port = app.get('port');
 const express = require('@feathersjs/express');
 
 const mainApp = express().use('/api/v1', app);
+mainApp.use('/', express.static(app.get('public')));
 
 const server = mainApp.listen(port);
 

@@ -1,6 +1,6 @@
 {
-  "host": "feathers-app.feathersjs.com",
+  "host": "HOST",
   "port": "PORT",
   "PRODUCTION":"ISPRODUCTION",
-  "mongodb": "mongodb://yourpathtomongo"
+  "mongodb": "MONGODB"
 }
