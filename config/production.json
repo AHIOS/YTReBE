@@ -32,7 +32,7 @@
     "google": {
       "clientID": "GOOGLE_API_KEY",
       "clientSecret": "GOOGLE_API_SECRET",
-      "successRedirect": "/",
+      "successRedirect": "/api/v1",
       "scope": [
         "profile openid email"
       ]
