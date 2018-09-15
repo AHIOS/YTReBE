@@ -1,5 +1,5 @@
 {
-  "host": "staging-ytremix.herokuapp.com",
+  "host": "staging-ytremix.herokuapp.com/api/v1",
   "port": "PORT",
   "public": "../public/",
   "paginate": {
@@ -32,7 +32,7 @@
     "google": {
       "clientID": "GOOGLE_API_KEY",
       "clientSecret": "GOOGLE_API_SECRET",
-      "successRedirect": "/api/v1",
+      "successRedirect": "/",
       "scope": [
         "profile openid email"
       ]
