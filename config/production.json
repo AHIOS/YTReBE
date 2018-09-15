@@ -35,7 +35,8 @@
       "successRedirect": "/",
       "scope": [
         "profile openid email"
-      ]
+      ],
+      "callbackURL": "http://staging-ytremix.herokuapp.com"
     },
     "cookie": {
       "enabled": true,
