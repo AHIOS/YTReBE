@@ -1,5 +1,5 @@
 {
-  "host": "staging-ytremix.herokuapp.com/api/v1",
+  "host": "http://staging-ytremix.herokuapp.com",
   "port": "PORT",
   "public": "../public/",
   "paginate": {
@@ -35,8 +35,7 @@
       "successRedirect": "/",
       "scope": [
         "profile openid email"
-      ],
-      "callbackURL": "http://staging-ytremix.herokuapp.com"
+      ]
     },
     "cookie": {
       "enabled": true,

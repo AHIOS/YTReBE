@@ -2,6 +2,8 @@
 const logger = require('./logger');
 const app = require('./app');
 const port = app.get('port');
+// const server = app.listen(port);
+
 
 const express = require('@feathersjs/express');
 const mainApp = express().use('/api/v1', app);

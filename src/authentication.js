@@ -14,7 +14,8 @@ module.exports = function (app) {
 
   app.configure(oauth2(Object.assign({
     name: 'google',
-    Strategy: GoogleStrategy
+    Strategy: GoogleStrategy,
+    "callbackUrl": "http://localhost:3030/api/v1/auth/google/callback",
   }, config.google)));
 
   // The `authentication` service is used to create a JWT.

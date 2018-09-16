@@ -30,12 +30,13 @@
       "passwordField": "password"
     },
     "google": {
-      "clientID": "287141626432-3dhbmte3tltfs7b2l5bp9jqh76ap3d44.apps.googleusercontent.com",
-      "clientSecret": "9LsjA6pr6whCKJeeaG91L4qy",
-      "successRedirect": "/",
+      "clientID": "287141626432-5qblu84qj0hlc82o8k0p485hrhpmbnd1.apps.googleusercontent.com",
+      "clientSecret": "V8H6wp63-FjrXOPdJRS2A5RI",
+      "successRedirect": "/wewqeqw/weqweqw",
       "scope": [
         "profile openid email"
-      ]
+      ],
+      "callbackUrl": "http://localhost:3030/api/v1/auth/google/callback"
     },
     "cookie": {
       "enabled": true,
