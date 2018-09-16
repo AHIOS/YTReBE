@@ -26,7 +26,8 @@
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "dev": "nodemon src/",
     "start": "node src/",
-    "mocha": "mocha test/ --recursive --exit"
+    "mocha": "mocha test/ --recursive --exit",
+    "build-client": "scripts/build-client.sh"
   },
   "dependencies": {
     "@feathersjs/authentication": "^2.1.9",
