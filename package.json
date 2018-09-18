@@ -27,6 +27,7 @@
     "dev": "nodemon src/",
     "start": "node src/",
     "mocha": "mocha test/ --recursive --exit",
+    "build-client-local": "scripts/build-client-local.sh",
     "heroku-postbuild": "scripts/build-client.sh"
   },
   "dependencies": {
