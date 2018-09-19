@@ -1,5 +1,5 @@
 {
-  "host": "http://staging-ytremix.herokuapp.com",
+  "host": "HOST",
   "port": "PORT",
   "public": "../public/",
   "paginate": {
