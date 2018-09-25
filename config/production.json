@@ -1,6 +1,6 @@
 {
   "host": "staging-ytremix.herokuapp.com",
-  "port": "PORT",
+  "port": "80",
   "public": "../public/dist/",
   "paginate": {
     "default": 10,
@@ -33,6 +33,7 @@
       "clientID": "GOOGLE_API_KEY",
       "clientSecret": "GOOGLE_API_SECRET",
       "successRedirect": "/",
+      "callbackURL": "https://staging-ytremix.herokuapp.com/auth/google/callback/", 
       "scope": [
         "profile openid email"
       ]
