@@ -11,6 +11,8 @@ module.exports = function (app) {
   
   
     googleId: { type: String },
+    displayName: { type: String },
+    photoUrl: { type: String },
   
   }, {
     timestamps: true
