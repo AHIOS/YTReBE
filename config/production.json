@@ -1,6 +1,6 @@
 {
   "host": "staging-ytremix.herokuapp.com",
-  "port": "80",
+  "port": "PORT",
   "public": "../public/dist/",
   "paginate": {
     "default": 10,
