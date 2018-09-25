@@ -33,7 +33,7 @@
       "clientID": "GOOGLE_API_KEY",
       "clientSecret": "GOOGLE_API_SECRET",
       "successRedirect": "/",
-      "callbackURL": "https://staging-ytremix.herokuapp.com/auth/google/callback/", 
+      "callbackURL": "https://staging-ytremix.herokuapp.com/api/v1/auth/google/callback/", 
       "scope": [
         "profile openid email"
       ]
