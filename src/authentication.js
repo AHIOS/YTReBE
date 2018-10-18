@@ -1,6 +1,5 @@
 const authentication = require('@feathersjs/authentication');
 const jwt = require('@feathersjs/authentication-jwt');
-const local = require('@feathersjs/authentication-local');
 const oauth2 = require('@feathersjs/authentication-oauth2');
 const GoogleStrategy = require('passport-google-oauth20');
 
@@ -10,7 +9,6 @@ module.exports = function (app) {
   // Set up authentication with the secret
   app.configure(authentication(config));
   app.configure(jwt());
-  app.configure(local());
 
   app.configure(oauth2(Object.assign({
     name: 'google',
@@ -23,7 +21,7 @@ module.exports = function (app) {
   app.service('authentication').hooks({
     before: {
       create: [
-        authentication.hooks.authenticate(config.strategies)
+        authentication.hooks.authenticate('jwt')
       ],
       remove: [
         authentication.hooks.authenticate('jwt')

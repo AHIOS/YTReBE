@@ -1,9 +1,5 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
 
-const {
-  hashPassword, protect
-} = require('@feathersjs/authentication-local').hooks;
-
 function customizeGoogleProfile() {
   return function(context) {
     console.log('Customizing Google Profile');
@@ -28,18 +24,14 @@ module.exports = {
     all: [],
     find: [ authenticate('jwt') ],
     get: [ authenticate('jwt') ],
-    create: [ hashPassword(), customizeGoogleProfile() ],
-    update: [ hashPassword(), customizeGoogleProfile(),  authenticate('jwt') ],
-    patch: [ hashPassword(), customizeGoogleProfile(), authenticate('jwt') ],
+    create: [ customizeGoogleProfile() ],
+    update: [ customizeGoogleProfile(),  authenticate('jwt') ],
+    patch: [ customizeGoogleProfile(), authenticate('jwt') ],
     remove: [ authenticate('jwt') ]
   },
 
   after: {
-    all: [ 
-      // Make sure the password field is never sent to the client
-      // Always must be the last hook
-      protect('password')
-    ],
+    all: [],
     find: [],
     get: [],
     create: [],
